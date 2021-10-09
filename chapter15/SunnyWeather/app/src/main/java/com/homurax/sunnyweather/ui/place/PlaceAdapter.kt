@@ -12,6 +12,8 @@ import com.homurax.sunnyweather.logic.model.Place
 import com.homurax.sunnyweather.ui.weather.WeatherActivity
 import kotlinx.android.synthetic.main.activity_weather.*
 
+
+// RecyclerView的适配器，适配器继承自RecyclerView.Adapter，并将泛型指定为 PlaceAdapter.ViewHolder
 class PlaceAdapter(private val fragment: PlaceFragment, private val placeList: List<Place>) :
     RecyclerView.Adapter<PlaceAdapter.ViewHolder>() {
 

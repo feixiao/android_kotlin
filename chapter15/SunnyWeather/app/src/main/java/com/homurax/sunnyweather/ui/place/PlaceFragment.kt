@@ -65,6 +65,7 @@ class PlaceFragment : Fragment() {
             }
         }
 
+        // 观察LiveData
         viewModel.placeLiveData.observe(viewLifecycleOwner, Observer { result ->
             val places = result.getOrNull()
             if (places != null) {

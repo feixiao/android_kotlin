@@ -12,6 +12,8 @@ import java.lang.Exception
 import kotlin.coroutines.CoroutineContext
 
 // 在logic包下新建一个Repository单例类，作为仓库层的统一封装入口
+// 一般在仓库层中定义的方法，为了能将异步获取的数据以响应式编程的方式通知给上一层，
+// 通常会返回一个LiveData对象。LiveData对象方便被ModelView观察和处理。
 object Repository {
 
     fun savePlace(place: Place) = PlaceDao.savePlace(place)
